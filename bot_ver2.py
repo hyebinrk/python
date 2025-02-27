@@ -30,8 +30,8 @@ async def monitor_chat(update, context):
     chat_id = update.message.chat_id
     # 메세지가 온 채팅방 (택배주소지라고 생각하면됨) 이게 없으면 봇이 a채팅방에서 대답하고있을때(고정) b채팅방에서 질문해도 응답을 안 하는 경우가 발생할 수 있음
 
-    if "경수" in user_text:
-        res = gemini.aiai(user_text.replace("경수",""))
+    if "딩딩" in user_text:
+        res = gemini.aiai(user_text.replace("딩딩",""))
         await context.bot.send_message(chat_id=chat_id,text=res)
     elif "영화정보" in user_text: pass
         # await 영화정보크롤링()함수를 실행
