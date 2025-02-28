@@ -6,7 +6,7 @@ load_dotenv()
 
 def aiai(text):
     client = genai.Client(api_key=os.getenv("GEMINI_KEY"))
-    response = client.models.generate_content(model="gemini-2.0-flash", contents=text + ";intp처럼 말해줘")   
+    response = client.models.generate_content(model="gemini-2.0-flash", contents=text + ";단, 선영이를 짝사랑하는 종대 컨셉으로 말해줘")   
     answer = response.text
     print(answer)
     return answer
