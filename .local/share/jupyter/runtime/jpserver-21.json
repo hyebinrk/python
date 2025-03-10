@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "password": false,
+  "pid": 21,
+  "port": 8888,
+  "root_dir": "/home/jovyan",
+  "secure": false,
+  "sock": "",
+  "token": "91a30503b772d4fbf7b624f6133ffd9a980c82aaf8822fb5",
+  "url": "http://PKNU:8888/",
+  "version": "2.8.0"
+}
