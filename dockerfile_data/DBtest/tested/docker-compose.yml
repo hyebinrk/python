@@ -1,0 +1,29 @@
+services:
+  jupyterlab1:
+    image: myj:1.0
+    container_name: jupyterlab1
+    hostname: JUPYTERLAB1
+    command: /bin/bash -c "service ssh start && python3 -m jupyterlab --ip=0.0.0.0 --port=8888 --allow-root --FileContetsManager.delete_to_trash=False"
+    ports:
+      - '8888:8888'
+      - '22:22'
+
+
+  jupyterlab2:
+    image: myj:1.0
+    container_name: jupyterlab2
+    hostname: JUPYTERLAB2 
+    command: /bin/bash -c "service ssh start && python3 -m jupyterlab --ip=0.0.0.0 --port=8888 --allow-root --FileContetsManager.delete_to_trash=False"
+    ports:
+      - '8889:8888'
+      - '23:22'
+
+  jupyterlab3:
+    image: myj:1.0
+    container_name: jupyterlab3
+    hostname: JUPYTERLAB3
+    command: /bin/bash -c "service ssh start && python3 -m jupyterlab --ip=0.0.0.0 --port=8888 --allow-root --FileContetsManager.delete_to_trash=False"
+    ports:
+      - '8890:8888'
+      - '24:22'
+

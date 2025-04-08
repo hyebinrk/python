@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>998</width>
+    <height>896</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>881</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="verticalHeaderFormat">
+     <enum>QCalendarWidget::NoVerticalHeader</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>43</x>
+      <y>584</y>
+      <width>891</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>출결 정보 조회 날짜</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>640</y>
+      <width>431</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="rowCount">
+     <number>4</number>
+    </property>
+    <property name="columnCount">
+     <number>1</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>397</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>44</number>
+    </attribute>
+    <row>
+     <property name="text">
+      <string>출석</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>조퇴</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>외출</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>복귀</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>시간</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>640</y>
+      <width>441</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="rowCount">
+     <number>5</number>
+    </property>
+    <property name="columnCount">
+     <number>1</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>407</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>23</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>35</number>
+    </attribute>
+    <row>
+     <property name="text">
+      <string>출석</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>지각</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>조퇴</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>외출</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>결석</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>출결 현황</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>998</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

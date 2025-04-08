@@ -33,4 +33,4 @@ WORKDIR /home/pkhb
 RUN pip install --upgrade pip && pip install jupyterlab
 
 # ssh 서버 실행 및 주피터랩 가동(외부접속가능)
-CMD ["/bin/bash","-c","service ssh start && python3 -m jupyterlab --ip=0.0.0.0 --prt=8888 --allow-root"]
+CMD ["/bin/bash","-c","service ssh start && python3 -m jupyterlab --ip=0.0.0.0 --port=8888 --allow-root --FileContetsManager.delete_to_trash=False"]
