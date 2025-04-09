@@ -1,0 +1,69 @@
+본인 = localhost = 127.0.0.1
+[한글깨짐방지] 경로가 OS별로 다름
+우분투 경로 : nano /etc/mysql/my.cnf 
+경량화 OS경로: nano /etc/my.cnf 
+
+아래에 넣어주기
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+[mysqld]
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+character-set-server = utf8
+[DB생성시 한글 여부 설정]
+database 생성 시 character set을 utf-8 로 설정하는 방법
+1) CREATE DATABASE <database_name> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+생성된 database의 character set을 utf-8 로 변경하는 방법
+2)  ALTER DATABASE <database_name> DEFAULT CHARACTER SET utf8 ;
+테이블의 character set을 utf-8 로 변경하는 방법
+3) ALTER TABLE <table_name> CONVERT TO CHARACTER SET utf8;
+
+[한글 입력가능]
+microdnf update -y
+microdnf install -y glibc-langpack-ko
+locale 후 확인하기 (ex. POSIX 등으로 한글지원이 안되어있음)
+
+[해결1]
+echo "LANG=ko_KR.UTF-8" >> /etc/locale.conf
+echo "LC_ALL=ko_KR.UTF-8" >> /etc/locale.conf
+[해결2]
+echo "export LANG=ko_KR.UTF-8" >> /etc/profile
+echo "export LC_ALL=ko_KR.UTF-8" >> /etc/profile
+
+source /etc/profile
+locale
+또는 
+[리부팅]
+====================================================
+Create -> CREATE, INSERT
+  1) 데이터베이스 생성: CREATE DATABASE mydb
+      CREATE DATABASE IF NOT EXISTS mydb;
+  2) 테이블 생성: 
+      CREATE TABLE t1(id INT AUTO_INCREMENT PRIMARY KEY ,name VARCHAR(100), age INT);
+  3) INSERT INTO t1 ( name, age ) VALUES ('홍길동',27),('수퍼맨',44),('마리오',33);
+
+Read -> SELECT, SHOW
+  0) SHOW VARIABLES LIKE 'c%';
+  1) SHOW databases;
+  2) SHOW tables;
+  3) SELECT * FROM t1;
+
+Delete -> DELETE, DROP
+  1) DELETE FROM test.t2 WHERE id = '1';
+  2) DELETE FROM test.t2 WHERE name = 'm';
+  3) DROP DATABASE test;
+
+Update -> UPDATE, GRANT, ALTER, JOIN
+  1) UPDATE hangul.t1 SET name = '배트맨' WHERE id = '8';
+  2) GRANT ALL PRIVIEGES
+  3) ALTER TABLE (ADD, DROP, MODIFY, COLUMN)
+  4) JOIN : 
+	SELECT * 
+	FROM 테이블1 AS t1
+	JOIN 테이블2 AS t2
+	ON t1.공통컬럼 = t2.공통컬럼;
+ 
+ 
+
